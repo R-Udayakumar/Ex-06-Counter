@@ -13,9 +13,10 @@ A Synchronous counter is the counter in which the clock input with all the flip-
 ### State table
 ![image](https://github.com/rvinifa/Counter/assets/133735746/ede78598-89fd-4aeb-9d82-329e45d05f2a)
 
-### K-map Simplification
 
-   ![image](https://github.com/rvinifa/Counter/assets/133735746/21554263-611b-44a2-8f78-7b2220ef5a05)
+### K-map Simplification
+![image](https://github.com/rvinifa/Counter/assets/133735746/21554263-611b-44a2-8f78-7b2220ef5a05)
+   
    
 ### Logic Diagram
 ![image](https://github.com/rvinifa/Counter/assets/133735746/2ab715d3-f6d5-4cf6-8fda-8fa666518c0b)
