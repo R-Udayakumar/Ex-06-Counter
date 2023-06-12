@@ -41,17 +41,51 @@ A Synchronous counter is the counter in which the clock input with all the flip-
 
 
 ## Program:
+### 1.UP counter:
+```
+module upcounter(clk,q1,q2,q3,q4);
+input clk;
+output reg q1,q2,q3,q4;
+always@(posedge clk)
+begin
+q4=(q1&q2&q3)^q4;
+q3=(q1&q2)^q3;
+q2=q1^q2;
+q1=1^q1;
+end
+endmodule
+```
 
+### 2.DOWN counter:
+```
+module downcounter(clk,q1,q2,q3,q4);
+input clk;
+output reg q1,q2,q3,q4;
+always@(posedge clk)
+begin
+q4=((~q3)&(~q2)&(~q1))^q4;
+q3=((~q2)&(~q1))^q3;
+q2=(~q1)^q2;
+q1=1^q1;
+end
+endmodule
+```
 
 ## RTL Schematic:
+### UP Counter:
+![image](https://github.com/R-Udayakumar/Ex-06-Counter/assets/118708024/0fd4b8a3-7c22-4298-8a3a-d7f92099e12d)
 
-
+### DOWN Counter:
+![image](https://github.com/R-Udayakumar/Ex-06-Counter/assets/118708024/2f86daa9-f7bf-4173-8960-1314bc929664)
 
 
 ## Timing Diagram:
+### UP Counter:
+![image](https://github.com/R-Udayakumar/Ex-06-Counter/assets/118708024/80ecc0d3-f403-41fa-bdaf-1acff8b6d551)
 
+### DOWN Counter:
+![image](https://github.com/R-Udayakumar/Ex-06-Counter/assets/118708024/6f247385-2685-48ab-a178-81092233fc46)
 
 
 ## Result:
 Thus the Synchronous UP and DOWN counters using T flipflops are implemented and the state tables are verified.
-
